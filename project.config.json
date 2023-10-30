@@ -1,0 +1,7 @@
+{
+  "description": "project config file",
+  "projectname": "helloword",
+  "setting": {
+    "es5": false
+  }
+}

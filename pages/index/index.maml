@@ -1,0 +1,164 @@
+<!--index.maml-->
+<view class="container">
+    <view class="home">
+
+        <!-- Sliders -->
+        <swiper autoplay>
+            <swiper-item>
+                <image src="../../res/images/diamonds_1.png" />
+            </swiper-item>
+            <swiper-item>
+                <image src="../../res/images/diamonds_3.png" />
+            </swiper-item>
+            <swiper-item>
+                <image src="../../res/images/diamonds_2.png" />
+            </swiper-item>
+        </swiper>
+
+
+        <!-- Categories -->
+        <view>
+            <view class="category_name">
+                Categories
+            </view>
+        </view>
+        <view class="category_slider">
+            <view class="category" bind:tap="categoryClicked">
+                <image class="category_image" src="../../res/images/diamonds_3.png" />
+                <h4 class="category_title">Women Salon</h4>
+            </view>
+
+            <view class="category" bind:tap="categoryClicked">
+                <image class="category_image" src="../../res/images/diamonds_1.png" />
+                <h4 class="category_title">Appliance Repair</h4>
+            </view>
+            <view class="category">
+                <image class="category_image" src="../../res/images/diamonds_2.png" />
+                <h4 class="category_title">Plumber & Electrician</h4>
+            </view>
+            <view class="category">
+                <image class="category_image" src="../../res/images/diamonds_3.png" />
+                <h4 class="category_title">Home Painting</h4>
+            </view>
+            <view class="category">
+                <image class="category_image" src="../../res/images/diamonds_3.png" />
+                <h4 class="category_title">Tutor</h4>
+            </view>
+            <view class="category">
+                <image class="category_image" src="../../res/images/diamonds_3.png" />
+                <h4 class="category_title">Women Salon</h4>
+            </view>
+        </view>
+
+
+        <!-- SubCategories With Services -->
+        <view>
+            <view class="category_name">
+                Appliance Repair
+            </view>
+            <view class="sub_category_slider">
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Television</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Stove</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Enjera Mitad</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Washing Machine</view>
+                </view>
+            </view>
+        </view>
+
+        <view>
+            <view class="category_name">
+                Plumber & Electrician
+            </view>
+            <view class="sub_category_slider">
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Television</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Stove</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Enjera Mitad</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Washing Machine</view>
+                </view>
+            </view>
+        </view>
+
+        <view>
+            <view class="category_name">
+                Cleaning & Domestic Work
+            </view>
+            <view class="sub_category_slider">
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Television</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Stove</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Enjera Mitad</view>
+                </view>
+                <view class="sub_category_item">
+                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
+                    <view class="sub_category_title">Washing Machine</view>
+                </view>
+            </view>
+        </view>
+
+
+
+
+    </view>
+
+    <!-- <view class="content">
+            <p>Amount</p>
+            <view class="amount">
+                <view bind:tap="waresSelect" data-itemid="{{item.id}}" ma:for="{{waresList}}" ma:key="id" class="{{item.className}}">
+                    <view class="tips">
+                        <image ma:if="{{item.imageType == 1}}" src="../../res/images/diamonds_1.png" />
+                        <image ma:elif="{{item.imageType == 2}}" src="../../res/images/diamonds_2.png" />
+                        <image ma:elif="{{item.imageType == 3}}" src="../../res/images/diamonds_3.png" />
+                        <image ma:elif="{{item.imageType == 4}}" src="../../res/images/diamonds_4.png" />
+                        <image ma:elif="{{item.imageType == 5}}" src="../../res/images/diamonds_5.png" />
+                        <image ma:elif="{{item.imageType == 6}}" src="../../res/images/diamonds_6.png" />
+                        <image ma:elif="{{item.imageType == 7}}" src="../../res/images/diamonds_7.png" />
+                        <image ma:else="{{item.imageType == 8}}" src="../../res/images/diamonds_1.png" />
+                    </view>
+                    <view class="dscription">
+                        <view class="bg1">{{ item.title }}</view>
+                        <view class="bg2 fn2">{{ item.price }}{{ item.currency }}</view>
+                    </view>
+                </view>
+            </view>
+        </view> -->
+    <!-- <view class="footer" id="foot">
+            <button bind:tap="buyGoods" class="c" ma:if="{{selectedWaresInfo !== undefined}}">
+                Recharge:{{ selectedWaresInfo.price }}{{ selectedWaresInfo.currency }}
+            </button>
+            <button class="b" ma:else type="button" id="buy">
+                Recharge
+            </button>
+            <view class="p">www.mobilelegends.com</view>
+        </view> -->
+
+</view>
+
