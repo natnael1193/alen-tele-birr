@@ -23,7 +23,7 @@
             </view>
         </view>
         <view class="category_slider">
-            <view class="category" bind:tap="categoryClicked">
+            <view class="category" bind:tap="testClicked">
                 <image class="category_image" src="../../res/images/diamonds_3.png" />
                 <h4 class="category_title">Women Salon</h4>
             </view>

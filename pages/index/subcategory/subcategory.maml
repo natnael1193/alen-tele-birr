@@ -1,0 +1,41 @@
+<view>
+    <view class="service_header">
+        <image class="service_header_image" src="../../../res/images/diamonds_2.png" />
+    </view>
+
+    <view class="service_container">
+        <view class="service_item">
+            <image src="../../../res/images/diamonds_2.png" class="service_item_image" />
+            <view>
+                <view class="service_item_title">Plates not Working</view>
+                <view class="service_item_price">450 Birr</view>
+            </view>
+            <view class="service_item_button">View</view>
+        </view>
+        <view class="service_item">
+            <image src="../../../res/images/diamonds_3.png" class="service_item_image" />
+            <view>
+                <view class="service_item_title">Not Powering On</view>
+                <view class="service_item_price">450 Birr</view>
+            </view>
+            <view class="service_item_button">View</view>
+        </view>
+        <view class="service_item">
+            <image src="../../../res/images/diamonds_4.png" class="service_item_image" />
+            <view>
+                <view class="service_item_title">Half Display</view>
+                <view class="service_item_price">450 Birr</view>
+            </view>
+            <view class="service_item_button">View</view>
+        </view>
+        <view class="service_item">
+            <image src="../../../res/images/diamonds_4.png" class="service_item_image" />
+            <view>
+                <view class="service_item_title">Plates not Working</view>
+                <view class="service_item_price">450 Birr</view>
+            </view>
+            <view class="service_item_button">View</view>
+        </view>
+    </view>
+</view>
+

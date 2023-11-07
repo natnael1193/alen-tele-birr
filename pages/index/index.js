@@ -142,6 +142,19 @@ Page({
     console.log("Catgeory Clicke")
     ma.navigateTo({
       url: 'category/category',
+      events: {
+        acceptData: function (data) {
+          console.log("from_home_page", data)
+        }
+      },
+      success: function(res){
+        res.eventChannel.emt('acceptData')
+      }
+    })
+  },
+  testClicked() {
+    ma.navigateTo({
+      url: 'test/test',
     })
   }
 });

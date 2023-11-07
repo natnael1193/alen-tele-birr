@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/category/category"
+    "pages/index/category/category",
+    "pages/index/test/test",
+    "pages/index/subcategory/subcategory"
   ],
   "window": {
     "backgroundTextStyle": "light",
