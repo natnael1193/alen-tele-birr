@@ -170,9 +170,11 @@ Page({
       },
     });
   },
-  navigateToSubCategory() {
+  navigateToSubCategory(e) {
+    const id = e.target.dataset.itemid
+    console.log('id', id)
     ma.navigateTo({
-      url: '../subcategory/subcategory',
+      url: `../subcategory/subcategory?id=${id}`,
     })
   }
 });

@@ -10,10 +10,10 @@
         <maui-loading color="#FF0000" type="spinner" />
         <view> Loading...</view>
     </view>
-    <view class=" sub_category_container" ma:if="{{isLoading == false}}" bind:tap="navigateToSubCategory">
-        <view class="sub_caegory_item" data-itemid="{{item.id}}" ma:for="{{cat_data}}" ma:key="id" bind:tap="onReady">
-            <image class="sub_category_icon" />
-            <view>{{item.name.en}}</view>
+    <view class=" sub_category_container" ma:if="{{isLoading == false}}" bind:tap="navigateToSubCategory" data-itemid="{{item.id}}">
+        <view class="sub_caegory_item" data-itemid="{{item.id}}" ma:for="{{cat_data}}" ma:key="id">
+            <image class="sub_category_icon" data-itemid="{{item.id}}" />
+            <view data-itemid="{{item.id}}">{{item.name.en}}</view>
         </view>
         <!-- <view class="sub_caegory_item">
             <image class="sub_category_icon" />

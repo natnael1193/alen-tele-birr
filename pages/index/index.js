@@ -147,7 +147,7 @@ Page({
           console.log("from_home_page", data)
         }
       },
-      success: function(res){
+      success: function (res) {
         res.eventChannel.emt('acceptData')
       }
     })
@@ -155,6 +155,11 @@ Page({
   testClicked() {
     ma.navigateTo({
       url: 'test/test',
+      success: function (res) {
+        res.eventChannel.emit("from_home_to_test", {
+          data: 'exmaple'
+        })
+      }
     })
   }
 });
