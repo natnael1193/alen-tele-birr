@@ -41,4 +41,11 @@ Page({
       title: '',
     };
   },
+  navigateToService(e) {
+    const id = e.target.dataset.itemid
+    console.log('id', id)
+    ma.navigateTo({
+      url: `../service/service?id=${id}`,
+    })
+  }
 });

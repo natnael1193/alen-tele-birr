@@ -167,7 +167,7 @@
 }
 .category_image {
     height: 40px;
-    width: 50px;
+    width: 40px;
     background-color: #0053aa;
     border-radius: 5px;
 }

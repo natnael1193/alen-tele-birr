@@ -3,11 +3,13 @@
 var app = getApp();
 var calc = require("../../utils/calc");
 var firebase = require("../../utils/firebase-app.js");
+// var base_url = require("../../utils/base_url.js");
 
 Page({
   data: {
-    // baseUrl: "http://localhost:8081",
-    baseUrl: "http://php1demo.biisho.com",
+    baseUrl: "https://api-v2.alenplc.com/api/v2",
+    // baseUrl: "http://php1demo.biisho.com",
+    // baseUrl: base_url,
     selectedWaresInfo: undefined,
     waresList: [
       {
@@ -73,6 +75,8 @@ Page({
         className: "per perb",
       },
     ],
+    cat_data: null,
+    cat_sub_data: null
   },
   // onLoad(options) { },
   onLoad: function () {
@@ -83,8 +87,39 @@ Page({
     var that = this;
 
     console.log(firebase);
+
+    ma.request({
+      url: this.data.baseUrl + `/categories?pageSize=10`,
+      method: "GET",
+      // data: data,
+      success: (res) => {
+        console.log("cat-res_id", res.data.categories)
+        // this.data.cat_data.push(res.data.data.data)
+        this.setData({
+          cat_data: res.data.categories,
+          isLoading: false
+        })
+
+      },
+    });
+    ma.request({
+      url: this.data.baseUrl + `/categories/sub-categories`,
+      method: "GET",
+      // data: data,
+      success: (res) => {
+        console.log("cat-re", res.data.data.category)
+        // this.data.cat_data.push(res.data.data.data)
+        this.setData({
+          cat_sub_data: res.data.data.category,
+          isLoading: false
+        })
+
+      },
+    });
   },
-  onReady() { },
+  onReady() {
+
+  },
   onShow() { },
   onHide() { },
   onUnload() { },

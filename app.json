@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/index/category/category",
     "pages/index/test/test",
-    "pages/index/subcategory/subcategory"
+    "pages/index/subcategory/subcategory",
+    "pages/index/service/service"
   ],
   "window": {
     "backgroundTextStyle": "light",

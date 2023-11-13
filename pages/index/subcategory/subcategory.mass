@@ -1,8 +1,13 @@
 
+
 .service_header{
-    background-image: url('https://alenplc.com/images/Alen-Pattern-04.jpg');
     background-size: contain;
     padding: 20px;
+}
+
+.service_header_title{
+  color: white;
+  z-index: 100;
 }
 
 .service_header_image{
@@ -20,7 +25,7 @@
 .service_item{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     border-radius: 5px;
@@ -34,10 +39,13 @@
     height: 80px;
 }
 
+
+
 .service_item_button{
  background-color: #D7272A;
- padding-left: 10px;
- padding-right: 10px;
+ padding-left: 18px;
+ padding-right: 18px;
+ padding: 8px;
  color: white;
  border-radius: 4px;
  /* align-self: flex-end; */

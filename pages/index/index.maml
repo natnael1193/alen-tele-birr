@@ -23,113 +23,34 @@
             </view>
         </view>
         <view class="category_slider">
-            <view class="category" bind:tap="testClicked">
-                <image class="category_image" src="../../res/images/diamonds_3.png" />
-                <h4 class="category_title">Women Salon</h4>
-            </view>
-
-            <view class="category" bind:tap="categoryClicked">
-                <image class="category_image" src="../../res/images/diamonds_1.png" />
-                <h4 class="category_title">Appliance Repair</h4>
-            </view>
-            <view class="category">
-                <image class="category_image" src="../../res/images/diamonds_2.png" />
-                <h4 class="category_title">Plumber & Electrician</h4>
-            </view>
-            <view class="category">
-                <image class="category_image" src="../../res/images/diamonds_3.png" />
-                <h4 class="category_title">Home Painting</h4>
-            </view>
-            <view class="category">
-                <image class="category_image" src="../../res/images/diamonds_3.png" />
-                <h4 class="category_title">Tutor</h4>
-            </view>
-            <view class="category">
-                <image class="category_image" src="../../res/images/diamonds_3.png" />
-                <h4 class="category_title">Women Salon</h4>
+            <view class="category" bind:tap="testClicked" data-itemid="{{item.id}}" ma:for="{{cat_data}}" ma:key="id">
+                <image data-itemid="{{item.id}}" class="category_image" src={{item.img}} />
+                <h4 data-itemid="{{item.id}}" class="category_title">{{item.name}}</h4>
             </view>
         </view>
 
 
         <!-- SubCategories With Services -->
-        <view>
+        <view data-itemid="{{item.id}}" ma:for="{{cat_sub_data}}" ma:key="{{item.id}}">
             <view class="category_name">
-                Appliance Repair
+                {{item.name}}
             </view>
             <view class="sub_category_slider">
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Television</view>
+
+                <view class="sub_category_item" data-itemid="{{item.subcategories.id}}" ma:for="{{item.subcategories}}" ma:key="{{item.subcategories.id}}">
+                    <image class="sub_category_image" src={{item.img}} />
+                    <view class="sub_category_title">{{item.name}}</view>
                 </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Stove</view>
-                </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Enjera Mitad</view>
-                </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Washing Machine</view>
-                </view>
+
             </view>
+
+
+
+
+
         </view>
 
-        <view>
-            <view class="category_name">
-                Plumber & Electrician
-            </view>
-            <view class="sub_category_slider">
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Television</view>
-                </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Stove</view>
-                </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Enjera Mitad</view>
-                </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Washing Machine</view>
-                </view>
-            </view>
-        </view>
-
-        <view>
-            <view class="category_name">
-                Cleaning & Domestic Work
-            </view>
-            <view class="sub_category_slider">
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Television</view>
-                </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Stove</view>
-                </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Enjera Mitad</view>
-                </view>
-                <view class="sub_category_item">
-                    <image class="sub_category_image" src="../../res/images/diamonds_1.png" />
-                    <view class="sub_category_title">Washing Machine</view>
-                </view>
-            </view>
-        </view>
-
-
-
-
-    </view>
-
-    <!-- <view class="content">
+        <!-- <view class="content">
             <p>Amount</p>
             <view class="amount">
                 <view bind:tap="waresSelect" data-itemid="{{item.id}}" ma:for="{{waresList}}" ma:key="id" class="{{item.className}}">
@@ -150,7 +71,7 @@
                 </view>
             </view>
         </view> -->
-    <!-- <view class="footer" id="foot">
+        <!-- <view class="footer" id="foot">
             <button bind:tap="buyGoods" class="c" ma:if="{{selectedWaresInfo !== undefined}}">
                 Recharge:{{ selectedWaresInfo.price }}{{ selectedWaresInfo.currency }}
             </button>
@@ -159,6 +80,8 @@
             </button>
             <view class="p">www.mobilelegends.com</view>
         </view> -->
+
+    </view>
 
 </view>
 
