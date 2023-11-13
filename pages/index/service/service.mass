@@ -1,0 +1,62 @@
+.service_detail_header{
+    background-image: url('https://alenplc.com/images/Alen-Pattern-04.jpg');
+    background-size: contain;
+    padding: 20px;
+}
+
+.service_detail_header_image{
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.price {
+    position: fixed;
+    bottom: 0;
+    background-color: #EFEFEF;
+    width: 100%;
+    /* padding: 10px; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    flex-grow: 100%;
+    /* padding-bottom: 20px; */
+}
+
+.price_item_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.price_button {
+    background-color: #D7272A;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding: 8px;
+    color: white;
+    border-radius: 4px;
+}
+
+.price_title_container {
+   padding: 10px;
+   padding-bottom: 120px;
+}
+
+.price_title {
+    font-size: large;
+    font-weight: 600;
+}
+
+.price_body {
+    font-size: larger;
+}
+
+
+.price_amount {
+    color: #252525;
+    font-size: 20px;
+    font-weight: 500;
+}
+

@@ -1,6 +1,7 @@
 <view>
-    <view class="service_header">
+    <view class="service_header" style="background-image: url('https://alenplc.com/images/Alen-Pattern-04.jpg');">
         <image class="service_header_image" src="../../../res/images/diamonds_2.png" />
+        <view class="service_header_title">Sub-Category Name</view>
     </view>
 
     <view class="service_container">
@@ -10,7 +11,11 @@
                 <view class="service_item_title">Plates not Working</view>
                 <view class="service_item_price">450 Birr</view>
             </view>
-            <view class="service_item_button">View</view>
+            <view class="">
+                <view class="service_item_button" bind:tap="navigateToService">View</view>
+            </view>
+
+
         </view>
         <view class="service_item">
             <image src="../../../res/images/diamonds_3.png" class="service_item_image" />
